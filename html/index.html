@@ -5,58 +5,69 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
   <title>Document</title>
 </head>
 
 <body>
-  <header>
-    <h1><img src="../images/logo/Booki@3x.png" alt="Logo de Booki"></h1>
-    <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-    <p>En plein centre ville ou en pleine nature</p>
-    <nav>
-      <a href="#">Hébergements</a>
-      <a href="#">Activités</a>
-    </nav>
-  </header>
-  <main>
-    <!--section plutôt que div-->
-    <section>
-      <form action=""><button></button><input type="search"
-          placeholder="Marseille, France" /><button>Rechercher</button>
-        <!--le form était au départ dans le head, mais je pense finalement qu'avec les filtres, il forme un ensemble-->
-      </form>
-      <p>Filtres</p>
-      <!--Au départ, j'ai mis aux <label> des checkbox que je pensais styliser ensuite d'une manière ou d'une autre, mais après réflexion je penses que ce sont des boutons qui seront plutôt animés par du JS avec un écouteur d'événement car la requête sera tout logiquement traitée en backend-->
-      <label for=""><button>Économique</button></label>
-      <label for=""><button>Familial</button></label>
-      <label for=""><button>Romantique</button></label>
-      <label for=""><button>Animaux autorisés</button></label>
-    </section>
-    <em><span src="icone de fontawesome" alt="information">Plus de 500 logements sont disponibles dans cette ville</em>
+  <div class="page">
+    <header class="header">
+      <!--@whitespace----------------------------------------------------------------------->
+      <nav class="ancres">
+        <h1 class="logo"><img src="../images/logo/Booki@3x.png" alt="Logo de Booki"></h1>
+        <ul class="ancres_ul">
+          <li class="ancres_li"><a href="#">Hébergements</a></li>
+          <li class="ancres_li"><a href="#">Activités</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!--section plutôt que div-->
+      <section>
+        <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+        <p class="paragraph">En plein centre ville ou en pleine nature</p>
+        <form action=""><button></button><input type="search"
+            placeholder="Marseille, France" /><button>Rechercher</button>
+          <!--le form était au départ dans le head, mais je pense finalement qu'avec les filtres, il forme un ensemble-->
+        </form>
+        <p id="filtres">Filtres</p>
+        <!--Au départ, j'ai mis aux <label> des checkbox que je pensais styliser ensuite d'une manière ou d'une autre, mais après réflexion je penses que ce sont des boutons qui seront plutôt animés par du JS avec un écouteur d'événement car la requête sera tout logiquement traitée en backend-->
+        <label for=""><button>Économique</button></label>
+        <label for=""><button>Familial</button></label>
+        <label for=""><button>Romantique</button></label>
+        <label for=""><button>Animaux autorisés</button></label>
+      </section>
+
+      <em><span src="icone de fontawesome" alt="information">Plus de 500 logements sont disponibles dans cette
+          ville</em>
 
 
-    <section class="hebergements">
-      <div class="hebergements_container">
-        <h3 class="hebergements_title">Hébergements à Marseille</h3>
-        <article class="hebergements_article">
-          <img class="test" src="../images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-            alt="Photo d'une chambre de l'Auberge La Cannebière">
-          <h4>Auberge La Cannebière</h4>
-          <p>Nuit à partir de 25€</p>
-          <span aria-label="Note : 4 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></div>
-            <span class="fa-duotone fa-star" aria-hidden="true"></span>
-          </span>
-          <!--Il est sémantiquement plus correct, généralement, d'utiliser un span plutôt qu'une balise <i> pour les icônes fontawesome.-->
+      <section class="hebergements">
+        <div class="hebergements_container">
+          <h3 class="hebergements_title">Hébergements à Marseille</h3>
+          <article class="hebergements_article">
+            <img class="test" src="../images/hebergements/1_xlarge/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+              alt="Photo d'une chambre de l'Auberge La Cannebière">
+            <h4>Auberge La Cannebière</h4>
+            <p>Nuit à partir de 25€</p>
+            <span aria-label="Note : 4 sur 5">
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true">
+        </div>
+        <span class="fa-duotone fa-star" aria-hidden="true"></span>
+        </span>
+        <!--Il est sémantiquement plus correct, généralement, d'utiliser un span plutôt qu'une balise <i> pour les icônes fontawesome.-->
         </article>
         <article class="hebergements_article">
           <img src="../images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
@@ -67,158 +78,163 @@
             <span class="fa-solid fa-star" aria-hidden="true"></span>
             <span class="fa-solid fa-star" aria-hidden="true"></span>
             <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></div>
-            <span class="fa-solid fa-star" aria-hidden="true"></div>
-          </span>
-        </article>
-        <article class="hebergements_article">
-          <img src="../images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
-          <h4>Hôtel Les mouettes</h4>
-          <p>Nuit à partir de 76€</p>
-          <span aria-label="Note : 4 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></div>
-            <span class="fa-duotone fa-star" aria-hidden="true"></span>
-          </span>
-        </article>
-        <article class="hebergements_article">
-          <img src="../images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
-          <h4>Hôtel de la mer</h4>
-          <p>Nuit à partir de 46€</p>
-          <span aria-label="Note : 4 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-duotone fa-star" aria-hidden="true"></span>
-            <span class="fa-duotone fa-star" aria-hidden="true"></span>
-          </span>
-        </article>
-        <article class="hebergements_article">
-          <img src="../images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
-          <h4>Auberge Le Panier</h4>
-          <p>Nuit à partir de 23€</p>
-          <span aria-label="Note : 4 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></div>
-            <span class="fa-duotone fa-star" aria-hidden="true"></span>
-          </span>
-        </article>
-        <article class="hebergements_article">
-          <img src="../images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
-          <h4>Hôtel chez Amina</h4>
-          <p>Nuit à partir de 96€</p>
-          <span aria-label="Note : 5 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></div>
-            <span class="fa-solid fa-star" aria-hidden="true"></div>
-          </span>
-        </article>
-      </div>
-
-      <a href="Afficher plus"></a>
-    </section>
-
-    <!--section plutôt que aside-->
-    <section class="populaires">
-      <h3 class="populaires_title">Les plus populaires</h3>
-      <span></span>
-      <article class="populaires_article">
-        <img src="../images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
-        <h4>Hôtel Le soleil du matin</h4>
-        <p>Nuit à partir de 128€</p>
-        <span aria-label="Note : 5 sur 5">
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></div>
-          <span class="fa-solid fa-star" aria-hidden="true"></div>
+            <span class="fa-solid fa-star" aria-hidden="true">
+  </div>
+  <span class="fa-solid fa-star" aria-hidden="true"></div>
+  </span>
+  </article>
+  <article class="hebergements_article">
+    <img src="../images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
+    <h4>Hôtel Les mouettes</h4>
+    <p>Nuit à partir de 76€</p>
+    <span aria-label="Note : 4 sur 5">
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></div>
+        <span class="fa-duotone fa-star" aria-hidden="true"></span>
+      </span>
+  </article>
+  <article class="hebergements_article">
+    <img src="../images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
+    <h4>Hôtel de la mer</h4>
+    <p>Nuit à partir de 46€</p>
+    <span aria-label="Note : 4 sur 5">
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-duotone fa-star" aria-hidden="true"></span>
+      <span class="fa-duotone fa-star" aria-hidden="true"></span>
+    </span>
+  </article>
+  <article class="hebergements_article">
+    <img src="../images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
+    <h4>Auberge Le Panier</h4>
+    <p>Nuit à partir de 23€</p>
+    <span aria-label="Note : 4 sur 5">
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></div>
+        <span class="fa-duotone fa-star" aria-hidden="true"></span>
+      </span>
+  </article>
+  <article class="hebergements_article">
+    <img src="../images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
+    <h4>Hôtel chez Amina</h4>
+    <p>Nuit à partir de 96€</p>
+    <span aria-label="Note : 5 sur 5">
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></span>
+      <span class="fa-solid fa-star" aria-hidden="true"></div>
+        <span class="fa-solid fa-star" aria-hidden="true"></div>
         </span>
-      </article>
-      <article class="populaires_article">
-        <img src="../images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
-        <h4>Au cœur de l'eau<br>Chambres d'hôtes</h4>
-        <!--mon interprétation de la maquette me fait mettre le <br> (qui a un sens sémantique) dans la balise h4 plutôt que juste après avec le reste du texte. En effet, la maquette comporte cette précision (la mise en gras notamment) comme si ça faisait partie du titre. J'aurai pu très bien faire autrement (un p stylisé), mais sémantiquement, ça aurait signifié autre chose-->
-        <span aria-label="Note : 4 sur 5">
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
+  </article>
+  </div>
+
+  <a href="Afficher plus">Afficher plus</a>
+  </section>
+
+  <!--section plutôt que aside-->
+  <section class="populaires">
+    <h3 class="populaires_title">Les plus populaires</h3>
+    <span></span>
+    <article class="populaires_article">
+      <img src="../images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
+      <h4>Hôtel Le soleil du matin</h4>
+      <p>Nuit à partir de 128€</p>
+      <span aria-label="Note : 5 sur 5">
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></div>
           <span class="fa-solid fa-star" aria-hidden="true"></div>
+          </span>
+    </article>
+    <article class="populaires_article">
+      <img src="../images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
+      <h4>Au cœur de l'eau<br>Chambres d'hôtes</h4>
+      <!--mon interprétation de la maquette me fait mettre le <br> (qui a un sens sémantique) dans la balise h4 plutôt que juste après avec le reste du texte. En effet, la maquette comporte cette précision (la mise en gras notamment) comme si ça faisait partie du titre. J'aurai pu très bien faire autrement (un p stylisé), mais sémantiquement, ça aurait signifié autre chose-->
+      <span aria-label="Note : 4 sur 5">
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></div>
           <span class="fa-duotone fa-star" aria-hidden="true"></span>
         </span>
         <span aria-label="Note : 4 sur 5" class="fa-solid fa-star"></span>
-      </article>
-      <article class="populaires_article">
-        <img src="../images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
-        <h4>Hôtel Tout bleu et Blanc</h4>
-        <!--C'est exactement écrit ainsi avec les majuscules aux mêmes endroits-->
-        <p>Nuit à partir de 68€</p>
-        <span aria-label="Note : 4 sur 5">
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></div>
+    </article>
+    <article class="populaires_article">
+      <img src="../images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
+      <h4>Hôtel Tout bleu et Blanc</h4>
+      <!--C'est exactement écrit ainsi avec les majuscules aux mêmes endroits-->
+      <p>Nuit à partir de 68€</p>
+      <span aria-label="Note : 4 sur 5">
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></span>
+        <span class="fa-solid fa-star" aria-hidden="true"></div>
           <span class="fa-duotone fa-star" aria-hidden="true"></span>
         </span>
-      </article>
-    </section>
+    </article>
+  </section>
 
 
-    <section>
-      <h3 class="activites_title">Activités à Marseille</h3>
-      <article class="activites_title">
-        <img src="../images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="">
-        <h4>Vieux Port</h4>
-      </article>
-      <article class="activites_title">
-        <img src="../images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="">
-        <h4>Fort de Pomègues</h4>
-      </article>
-      <article class="activites_title">
-        <img src="../images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="">
-        <h4>Îles du Frioul</h4>
-      </article>
-      <article class="activites_title">
-        <img src="../images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
-        <h4>Parc National des Calanques</h4>
-      </article>
-      <article class="activites_title">
-        <img src="../images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="">
-        <h4>Notre-Dame--de-la-Garde</h4>
-      </article>
-      <article class="activites_title">
-        <img src="../images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="">
-        <h4>Parc Longchamp</h4>
-      </article>
-    </section>
+  <section>
+    <h3 class="activites_title">Activités à Marseille</h3>
+    <article class="activites_title">
+      <img src="../images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="">
+      <h4>Vieux Port</h4>
+    </article>
+    <article class="activites_title">
+      <img src="../images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="">
+      <h4>Fort de Pomègues</h4>
+    </article>
+    <article class="activites_title">
+      <img src="../images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="">
+      <h4>Îles du Frioul</h4>
+    </article>
+    <article class="activites_title">
+      <img src="../images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="">
+      <h4>Parc National des Calanques</h4>
+    </article>
+    <article class="activites_title">
+      <img src="../images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="">
+      <h4>Notre-Dame--de-la-Garde</h4>
+    </article>
+    <article class="activites_title">
+      <img src="../images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="">
+      <h4>Parc Longchamp</h4>
+    </article>
+  </section>
   </main>
 
   <footer class="footer">
     <nav class="footer_nav">
-      <a href="">A propos</a>
+      <ul><a id="a_propos" href="">A propos</a>
+        <li><a href="">Fonctionnement du site</a></li>
+        <li><a href="">Conditions générales de vente</a></li>
+        <li><a href="">Données et confidentialité</a></li>
+      </ul>
       <!--Je penses que le a propos (sans accent ?) sera cliquable et non pas que ce n'est qu'un titre, mais je me trompes peut-être dans mon interprétation-->
-      <a href="">Fonctionnement du site</a>
-      <a href="">Conditions générales de vente</a>
-      <a href="">Données et confidentialité</a>
     </nav>
     <nav class="footer_nav">
-      <a href="">Nos hébergements</a>
-      <!--Similaire au commentaire précédent-->
-      <a href="">Charte qualité</a>
-      <a href="">Soumettre votre hôtel</a>
+      <ul><a id="hebergement" href="">Nos hébergements</a>
+        <!--Similaire au commentaire précédent-->
+        <li><a href="">Charte qualité</a></li>
+        <li><a href="">Soumettre votre hôtel</a></li>
+      </ul>
     </nav>
     <nav class="footer_nav">
-      <a href="">Assistance</a>
+      <ul><a id="assistance" href="">Assistance</a></ul>
       <!--Idem que le commentaire précédent-->
-      <a href="">Centre d'aide</a>
-      <a href="">Nous contacter</a>
+      <li><a href="">Centre d'aide</a></li>
+      <li><a href="">Nous contacter</a></li>
+      </ul>
     </nav>
   </footer>
+  </div>
 </body>
 
 </html>
