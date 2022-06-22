@@ -17,42 +17,31 @@ html {
   margin: 0 3.5%;
 }
 
-.top-menu {
+.header_menu {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.logo {
-  width: /*7%*/ 15%;
-  /* clip-path: inset(10% 0 10% 0); */
-  /* display: inline-block;
-  height: 50%;
-  vertical-align: bottom; */
+.header_logo {
+  width: 7%;
 }
 
-.menu-main ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-.ancres_li {
+.header_link {
   display: inline-block;
 }
 
-.ancres_li a {
+.header_link a {
   display: block;
   padding: 50px 25px 0 25px;
 }
 
-.ancres_li:hover {
+.header_link:hover {
   border-top: solid 2px var(--blue-site);
   color: var(--blue-site);
 }
 
-.logo > img {
-  /*width: 100%;
-  height: 100%;*/
+.header_logo > img {
   height: 250%;
   width: 250%;
 }
@@ -60,7 +49,7 @@ html {
 h2 {
   margin-top: 45px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h2 ~ p.paragraph {
