@@ -20,11 +20,12 @@
 <body>
   <div class="page">
     <header>
+      <!--@whitespace----------------------------------------------------------------------->
       <nav class="header_menu">
         <h1 class="header_logo"><img src="../images/logo/Booki@3x.png" alt="Logo de Booki"></h1>
         <ul>
-          <li class="header_link"><a href="#">Hébergements</a></li>
-          <li class="header_link"><a href="#">Activités</a></li>
+          <li class="ancres_li"><a href="#">Hébergements</a></li>
+          <li class="ancres_li"><a href="#">Activités</a></li>
         </ul>
       </nav>
     </header>
@@ -39,14 +40,23 @@
           <input class="placeholder" type="search" placeholder="Marseille, France">
           <button>Rechercher</button>
         </form>
-        <div>
-          <p id="filtres">Filtres</p>
-          <label for=""><button>Économique</button></label>
-          <label for=""><button>Familial</button></label>
-          <label for=""><button>Romantique</button></label>
-          <label for=""><button>Animaux autorisés</button></label>
+        <div class="filters">
+          <p>Filtres</p>
+          <label for="economique">
+            <span class="fa-solid fa-money-bill-wave"></span>
+            <button name="economique">Économique</button></label>
+          <label for="familial">
+            <span class="fa-solid fa-child-reaching"></span>
+            <button name="familial">Familial</button></label>
+          <label for="romantique">
+            <span class="fa-solid fa-heart"></span>
+            <button name="romantique">Romantique</button>
+          </label>
+          <label for="animaux-autorises">
+            <span class="fa-solid fa-dog"></span>
+            <button name="animaux-autorises">Animaux autorisés</button>
+          </label>
         </div>
-      </section>
 
     </main>
 

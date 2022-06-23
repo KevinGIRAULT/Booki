@@ -27,16 +27,16 @@ html {
   width: 7%;
 }
 
-.header_link {
+.ancres_li {
   display: inline-block;
 }
 
-.header_link a {
+.ancres_li a {
   display: block;
   padding: 50px 25px 0 25px;
 }
 
-.header_link:hover {
+.ancres_li:hover {
   border-top: solid 2px var(--blue-site);
   color: var(--blue-site);
 }
@@ -89,8 +89,17 @@ form > button {
   font-weight: bold;
 }
 
-.filtres {
+.filters {
+  display: flex;
+}
+
+.filters > p,
+label {
+  padding-right: 10px;
   font-weight: bold;
+}
+
+.filters > label {
 }
 
 /* .photo_hebergements {
