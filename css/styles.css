@@ -53,14 +53,14 @@ h2 {
 }
 
 h2 ~ p.paragraph {
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
 }
 
 .fa-location-dot {
   background-color: var(--grey-background);
   padding: 15px 20px;
   border-radius: 15px 0 0 15px;
-  font-size: 15px;
+  font-size: large;
 }
 
 input {
@@ -76,9 +76,10 @@ input {
 input::-moz-placeholder /* Firefox 19+ */ {
   color: var(--black-placeholder);
   opacity: 1;
+  font-size: large;
 }
 form {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 form > button {
   font-size: 15px;
@@ -87,19 +88,68 @@ form > button {
   border-radius: 0px 15px 15px 0;
   color: white;
   font-weight: bold;
+  font-size: large;
 }
 
-.filters {
+.filters-container {
   display: flex;
+  margin-bottom: 30px;
 }
 
-.filters > p,
+.filters-container > p,
 label {
   padding-right: 10px;
   font-weight: bold;
+  height: 50px;
 }
 
-.filters > label {
+.filters-container > p {
+  padding: 15px;
+}
+
+.filters-container > label { 
+margin-left: 1%;
+border: solid 2px var(--grey-background);
+border-left: none;
+border-radius: 25px 25px 25px 25px ;
+}
+
+/*Les boutons des filtres*/
+.filters-container button {
+  border-left: none;
+  padding: 10px 20px 10px 35px;
+  margin-left: -25px;
+  width: auto;
+  height: 20px;
+  border-radius: 0 25px 25px 0 ;
+  /* min-width:  */
+}
+
+.filters-container span {
+  background-color: var(--background-icon-font);
+  color: var(--blue-site);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.filters-container > label > span, button {
+  font-size: large;
+}
+
+.info {
+  display: flex;
+}
+
+.fa-info {
+border: solid 2px var(--grey-background);
+border-radius: 100%;
+padding: 5px 10px;
+color: var(--blue-site);
+font-size:small;
+}
+
+.info em {
+  padding: 5px 10px;
 }
 
 /* .photo_hebergements {
