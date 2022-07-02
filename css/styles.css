@@ -248,6 +248,58 @@ h3 {
   font-size: large;
 }
 
+.populaires {
+  background-color: var(--grey-background);
+  width: 30%;
+  padding: 40px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.noname {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_star {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_star > .fa-star {
+  font-size: large;
+}
+
+.populaires_title {
+  margin-bottom: 3%;
+}
+
+.populaires_article {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--background-article);
+  height: 200px;
+  width: auto;
+  padding: 5px;
+  border-radius: 10%;
+}
+
+.populaires_article > h4 {
+  font-weight: bold;
+  font-size: medium;
+  margin-top: 10px;
+}
+
+.populaires_article > p {
+  font-size: small;
+  margin-top: 5px;
+}
+
+.photo_populaires {
+  width: 100%;
+  height: 111px;
+}
+
 /* 
 .photo_activites {
   width: 10%;
