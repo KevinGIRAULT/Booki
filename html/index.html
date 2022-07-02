@@ -14,18 +14,18 @@
     href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
 
-  <title>Document</title>
+  <title>Booki</title>
 </head>
 
 <body>
-  <span class="page">
+  <div class="page">
     <header>
       <!--@whitespace----------------------------------------------------------------------->
       <nav class="header_menu">
         <h1 class="header_logo"><img src="../images/logo/Booki@3x.png" alt="Logo de Booki"></h1>
         <ul>
-          <li class="ancres_li"><a href="#">Hébergements</a></li>
-          <li class="ancres_li"><a href="#">Activités</a></li>
+          <li class="ancres_li"><a href="#hebergementsID">Hébergements</a></li>
+          <li class="ancres_li"><a href="#activitesID">Activités</a></li>
         </ul>
       </nav>
     </header>
@@ -66,8 +66,8 @@
             <span class="fa-solid fa-dog" alt="image décorative d'un chien" aria-hidden="true"></span>
             <button name="animaux-autorises">Animaux autorisés</button>
           </label>
-
         </div>
+
         <div class="info">
           <span class="fa-solid fa-info" alt="image décorative d'un i d'information" aria-hidden="true"
             alt="information"></span>
@@ -76,9 +76,9 @@
         </div>
       </section>
 
-      <section class="hebergements">
+      <section class="hebergements" id="hebergementsID">
+        <h3 class="hebergements_title">Hébergements à Marseille</h3>
         <div class="hebergements_container">
-          <h3 class="hebergements_title">Hébergements à Marseille</h3>
 
           <article class="hebergements_article">
             <div class="photo_hebergements">
@@ -86,100 +86,100 @@
                 alt="Photo d'une chambre de l'Auberge La Cannebière">
             </div>
             <h4>Auberge La Cannebière</h4>
-            <p>Nuit à partir de 25€</p>
+            <p>Nuit à partir de <em class="price">25€</em>
+            </p>
             <span aria-label="Note : 4 sur 5">
               <span class="fa-solid fa-star" aria-hidden="true"></span>
               <span class="fa-solid fa-star" aria-hidden="true"></span>
               <span class="fa-solid fa-star" aria-hidden="true"></span>
               <span class="fa-solid fa-star" aria-hidden="true"></span>
-              <span class="fa-regular fa-star"></span>
+              <span class="fa-solid fa-star fa-star--gray"></span>
+            </span>
+          </article>
+
+          <article class="hebergements_article">
+            <div class="photo_hebergements">
+              <img src="../images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                alt="Photo d'une chambre de l'Hôtel du Port">
+            </div>
+            <h4>Hôtel du port</h4>
+            <p>Nuit à partir de <em class="price">52€</em></p>
+            <span aria-label="Note : 5 sur 5">
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+            </span>
+          </article>
+
+          <article class="hebergements_article">
+            <div class="photo_hebergements">
+              <img src="../images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
+            </div>
+            <h4>Hôtel Les mouettes</h4>
+            <p>Nuit à partir de <em class="price">76€</em></p>
+            <span aria-label="Note : 4 sur 5">
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star fa-star--gray" aria-hidden="true"></span>
+            </span>
+          </article>
+
+          <article class="hebergements_article">
+            <div class="photo_hebergements"><img
+                src="../images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
+            </div>
+            <h4>Hôtel de la mer</h4>
+            <p>Nuit à partir de <em class="price">46€</em></p>
+            <span aria-label="Note : 3 sur 5">
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star fa-star--gray" aria-hidden="true"></span>
+              <span class="fa-solid fa-star fa-star--gray" aria-hidden="true"></span>
+            </span>
+          </article>
+
+          <article class="hebergements_article">
+            <div class="photo_hebergements"> <img
+                src="../images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
+            </div>
+
+            <h4>Auberge Le Panier</h4>
+            <p>Nuit à partir de <em class="price">23€</em></p>
+            <span aria-label="Note : 4 sur 5">
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star fa-star--gray" aria-hidden="true"></span>
+            </span>
+          </article>
+
+          <article class="hebergements_article">
+            <div class="photo_hebergements"><img
+                src="../images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
+            </div>
+            <h4>Hôtel chez Amina</h4>
+            <p>Nuit à partir de <em class="price">96€</em></p>
+            <span aria-label="Note : 5 sur 5">
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
+              <span class="fa-solid fa-star" aria-hidden="true"></span>
             </span>
           </article>
         </div>
-
-        <article class="hebergements_article">
-          <div class="photo_hebergements">
-            <img src="../images/hebergements/1_xlarge/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
-              alt="Photo d'une chambre de l'Hôtel du Port">
-          </div>
-          <h4>Hôtel du port</h4>
-          <p>Nuit à partir de 52€</p>
-          <span aria-label="Note : 5 sur 5"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-          <span class="fa-solid fa-star" aria-hidden="true"></span>
-        </article>
-
-        <article class="hebergements_article">
-          <div class="photo_hebergements">
-            <img src="../images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
-          </div>
-          <h4>Hôtel Les mouettes</h4>
-          <p>Nuit à partir de 76€</p>
-          <span aria-label="Note : 4 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-regular fa-star" aria-hidden="true"></span>
-          </span>
-        </article>
-
-        <article class="hebergements_article">
-          <div class="photo_hebergements"><img
-              src="../images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
-          </div>
-          <h4>Hôtel de la mer</h4>
-          <p>Nuit à partir de 46€</p>
-          <span aria-label="Note : 4 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-regular fa-star" aria-hidden="true"></span>
-            <span class="fa-regular fa-star" aria-hidden="true"></span>
-          </span>
-        </article>
-
-        <article class="hebergements_article">
-          <div class="photo_hebergements"> <img
-              src="../images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
-          </div>
-
-          <h4>Auberge Le Panier</h4>
-          <p>Nuit à partir de 23€</p>
-          <span aria-label="Note : 4 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-regular fa-star" aria-hidden="true"></span>
-          </span>
-        </article>
-
-        <article class="hebergements_article">
-          <div class="photo_hebergements"><img
-              src="../images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
-          </div>
-          <h4>Hôtel chez Amina</h4>
-          <p>Nuit à partir de 96€</p>
-          <span aria-label="Note : 5 sur 5">
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-            <span class="fa-solid fa-star" aria-hidden="true"></span>
-          </span>
-        </article>
+        <a href="#" class="afficher-plus">Afficher plus</a>
       </section>
     </main>
-
-
     <!-- <main>
   
   </div>
-  <a href="Afficher plus">Afficher plus</a>
   </section>
 
 
@@ -297,7 +297,7 @@
       </ul>
     </nav>
   </footer> -->
-    </div>
+  </div>
 </body>
 
 </html>
