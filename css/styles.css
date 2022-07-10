@@ -180,6 +180,7 @@ button {
   padding: 40px;
   margin-top: 30px;
   border-radius: 20px;
+  height: 100%;
 }
 
 .hebergements_container {
@@ -250,24 +251,28 @@ h3 {
 
 .populaires {
   background-color: var(--grey-background);
-  width: 30%;
+  width: 32%;
+  height: 100%;
   padding: 40px;
   margin-top: 30px;
   border-radius: 20px;
 }
 
-.noname {
+.hebergementsAndPopulaires {
   display: flex;
   justify-content: space-between;
+  height: 616px;
 }
 
 .title_star {
   display: flex;
   justify-content: space-between;
+  line-height: 45px;
 }
 
 .title_star > .fa-star {
   font-size: large;
+  color: var(--black-placeholder);
 }
 
 .populaires_title {
@@ -276,12 +281,13 @@ h3 {
 
 .populaires_article {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-between; */
   background-color: var(--background-article);
-  height: 200px;
+  height: 140px;
   width: auto;
   padding: 5px;
   border-radius: 10%;
+  margin-bottom: 30px;
 }
 
 .populaires_article > h4 {
@@ -296,12 +302,76 @@ h3 {
 }
 
 .photo_populaires {
-  width: 100%;
-  height: 111px;
+  width: 40%;
+  height: 100%;
 }
 
-/* 
-.photo_activites {
+.photo_populaires > img {
+  object-fit: cover;
+  /* height: 150%; */
+  width: 100%;
+  border-radius: 10% 0 0 10%;
+  height: 100%;
+}
+
+br {
+  margin: -10px;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-background);
+  height: 220px;
+  margin-top: 5%;
+  padding: 3%;
+}
+
+.footer_nav {
+  margin-right: 18%;
+}
+
+.footer-category {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer_nav > ul > li {
+  line-height: 30px;
+}
+
+.footer_ul {
+  line-height: 50px;
+}
+
+.populaires_article_right-side {
+  padding: 10px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: ;
+  margin-left: 20px; */
+}
+
+.txt_article {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.txt_article > h4 {
+  font-weight: bold;
+}
+
+.txt_article > p {
+  margin: 0;
+  padding-top: 3px;
+}
+
+activites .photo_activites {
   width: 10%;
   height: 10%;
 }
@@ -310,4 +380,12 @@ h3 {
   height: 100%;
   width: 100%;
   object-fit: cover;
-} */
+}
+
+/**
+
+
+Notre Dame 250
+Parc Longchamp 230
+marge + Ile de frioul = Parc Longchamp
+ **/
