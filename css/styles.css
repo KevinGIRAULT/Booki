@@ -318,32 +318,6 @@ br {
   margin: -10px;
 }
 
-footer {
-  display: flex;
-  justify-content: flex-start;
-  background-color: var(--grey-background);
-  height: 220px;
-  margin-top: 5%;
-  padding: 3%;
-}
-
-.footer_nav {
-  margin-right: 18%;
-}
-
-.footer-category {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer_nav > ul > li {
-  line-height: 30px;
-}
-
-.footer_ul {
-  line-height: 50px;
-}
-
 .populaires_article_right-side {
   padding: 10px 0 0 20px;
   display: flex;
@@ -371,7 +345,53 @@ footer {
   padding-top: 3px;
 }
 
-activites .photo_activites {
+.activites {
+  /* Les variables CSS peuvent être "locales" et dans ce cas précis, c'est le mieux, voir : https://css-tricks.com/breaking-css-custom-properties-out-of-root-might-be-a-good-idea/ */
+
+  --frioul/*xs*/ : 100px; /* calc(var(--pomegues) + var(--margin-activites)); */
+  --dame/*s*/ : calc(
+    var(--port-calanques) - (var(--longchamp) + var(--margin-activites))
+  );
+  --longchamp/*m*/ : calc(var(--frioul) + var(--margin-activites));
+  --pomegues/*l*/ : calc(var(--dame) + var(--margin-activites));
+  --port-calanques/*xl*/ : 400px;
+  --margin-activites: 30px;
+  /*
+      Parc Longchamp = Îles de Frioul + margin-top/
+      Fort de Pomègues = Notre-dame + margin-bottom
+      Dame = xl - (Longchamp + la marge)
+      xl = 
+      */
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  background-color: brown;
+}
+
+.activites_container {
+  background-color: blue;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.activites_left-side {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightcyan;
+  width: 50%;
+  /* height: 50%; */
+}
+
+.activites_right-side {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightpink;
+  width: 50%;
+  /* height: 50%; */
+}
+
+.activites .photo_activites {
   width: 10%;
   height: 10%;
 }
@@ -382,6 +402,47 @@ activites .photo_activites {
   object-fit: cover;
 }
 
+.pomegues_frioul_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid red;
+  width: 50%;
+}
+
+.dame_longchamp_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  background-color: blue;
+}
+
+.pomegues {
+  background-color: lightsalmon;
+  height: var(--pomegues);
+}
+
+.frioul {
+  background-color: lightgreen;
+  height: var(--frioul);
+}
+
+.dame {
+  background-color: aqua;
+  height: var(--dame);
+}
+
+.longchamp {
+  background-color: lightgrey;
+  height: var(--longchamp);
+}
+
+.port-calanques {
+  width: 50%;
+  height: var(--port-calanques);
+}
+
 /**
 
 
@@ -389,3 +450,29 @@ Notre Dame 250
 Parc Longchamp 230
 marge + Ile de frioul = Parc Longchamp
  **/
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--grey-background);
+  height: 220px;
+  margin-top: 5%;
+  padding: 3%;
+}
+
+.footer_nav {
+  margin-right: 18%;
+}
+
+.footer-category {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer_nav > ul > li {
+  line-height: 30px;
+}
+
+.footer_ul {
+  line-height: 50px;
+}
