@@ -348,108 +348,121 @@ br {
 .activites {
   /* Les variables CSS peuvent être "locales" et dans ce cas précis, c'est le mieux, voir : https://css-tricks.com/breaking-css-custom-properties-out-of-root-might-be-a-good-idea/ */
 
-  --frioul/*xs*/ : 100px; /* calc(var(--pomegues) + var(--margin-activites)); */
+  --frioul/*xs*/ : 165px; /* calc(var(--pomegues) + var(--gap)); */
   --dame/*s*/ : calc(
-    var(--port-calanques) - (var(--longchamp) + var(--margin-activites))
+    var(--vieuxPort-calanques) - (var(--longchamp) + var(--gap))
   );
-  --longchamp/*m*/ : calc(var(--frioul) + var(--margin-activites));
-  --pomegues/*l*/ : calc(var(--dame) + var(--margin-activites));
-  --port-calanques/*xl*/ : 400px;
-  --margin-activites: 30px;
+  --longchamp/*m*/ : calc(var(--frioul) + var(--gap));
+  --pomegues/*l*/ : calc(
+    var(--vieuxPort-calanques) - (var(--frioul) + var(--gap))
+  );
+  /* calc(var(--dame) + var(--gap)); */
+  --vieuxPort-calanques/*xl*/ : 449px;
+  --gap: 43px;
+  --txt: 56px;
   /*
       Parc Longchamp = Îles de Frioul + margin-top/
       Fort de Pomègues = Notre-dame + margin-bottom
       Dame = xl - (Longchamp + la marge)
       xl = 
       */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  margin-top: 50px;
-  background-color: brown;
+  margin-top: 50px; */
+  /* background-color: brown; */
 }
 
 .activites_container {
-  background-color: blue;
   display: flex;
-  height: 100%;
-  width: 100%;
+  /* background-color: gold; */
+  height: 449px;
+  gap: var(--gap);
 }
 
 .activites_left-side {
   display: flex;
-  justify-content: space-between;
-  background-color: lightcyan;
   width: 50%;
-  /* height: 50%; */
-}
-
-.activites_right-side {
-  display: flex;
-  justify-content: space-between;
-  background-color: lightpink;
-  width: 50%;
-  /* height: 50%; */
-}
-
-.activites .photo_activites {
-  width: 10%;
-  height: 10%;
-}
-
-.photo_activites > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  gap: var(--gap);
 }
 
 .pomegues_frioul_container {
   display: flex;
+  width: 50%;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid red;
+  /* gap: var(--gap); */
+}
+
+.activites_right-side {
+  display: flex;
   width: 50%;
+  gap: var(--gap);
 }
 
 .dame_longchamp_container {
   display: flex;
+  width: 50%;
   flex-direction: column;
   justify-content: space-between;
+  /* gap: var(--gap); */
+}
+
+.vieuxPort-calanques {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 50%;
-  background-color: blue;
+}
+
+.photo_activites {
+  height: calc(100% - var(--txt));
+}
+
+.photo_activites > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10% 10% 0 0;
+}
+
+.activites_article {
+  background-color: aqua;
+  border-radius: 40px 40px 42px 42px;
+  box-shadow: 0 0px 5px grey;
+}
+
+.activites_article > h4 {
+  font-weight: bold;
+  padding-top: 6%;
+  padding-left: 7%;
+  height: var(--txt);
+  background-color: white;
+  border-radius: 0% 0% 40px 40px;
 }
 
 .pomegues {
-  background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
   height: var(--pomegues);
 }
 
 .frioul {
-  background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
   height: var(--frioul);
 }
 
 .dame {
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
   height: var(--dame);
 }
 
 .longchamp {
-  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
   height: var(--longchamp);
 }
-
-.port-calanques {
-  width: 50%;
-  height: var(--port-calanques);
-}
-
-/**
-
-
-Notre Dame 250
-Parc Longchamp 230
-marge + Ile de frioul = Parc Longchamp
- **/
 
 footer {
   display: flex;
@@ -476,3 +489,14 @@ footer {
 .footer_ul {
   line-height: 50px;
 }
+
+/*sens border-radius : 
+2 valeurs : haut-gauche/bas-droit, haut-droit/bas-gauche
+3 valeurs : haut-gauche, haut-droit/bas-gauche, bas-droit
+4 valeurs : haut-gauche, haut-droit, bas-droit, bas-gauche (aiguille d'une montre à commencer en haut à gauche)
+
+sens box-shadow :
+Valeur 1 horizontal : positive, vers la droite; négative, vers la gauche
+Valeur 2 vertical : postive, bas; négative, haut.
+Valeur 3 propagation, Valeur 4 ombre.
+*/
