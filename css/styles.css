@@ -82,7 +82,7 @@ input::-moz-placeholder /* Firefox 19+ */ {
 form {
   margin-bottom: 30px;
 }
-form > button {
+.search {
   font-size: 15px;
   background-color: var(--blue-site);
   padding: 13.4px;
@@ -90,6 +90,10 @@ form > button {
   color: white;
   font-weight: bold;
   font-size: large;
+}
+
+.magnifying-glass::before {
+  display: none;
 }
 
 .filters-container {
@@ -126,10 +130,10 @@ label {
 /*Les boutons des filtres*/
 .filters-container button {
   border-left: none;
-  padding: 10px 20px 10px 35px;
+  padding: 10px 10px 10px 30px;
   margin-left: -25px;
   width: auto;
-  height: 20px;
+  /* height: 20px; */
   border-radius: 0 25px 25px 0;
   /* min-width:  */
 }
@@ -186,7 +190,7 @@ button {
 .hebergements_container {
   display: flex;
   flex-wrap: wrap;
-  gap: 33px;
+  gap: 32px;
 }
 
 .hebergements_title {
@@ -196,7 +200,7 @@ button {
 .hebergements_article {
   background-color: var(--background-article);
   width: calc(33% - 20px);
-  height: 200px;
+  height: 220px;
   padding: 5px;
   border-radius: 10%;
 }
@@ -249,6 +253,11 @@ h3 {
   font-size: large;
 }
 
+.populaires_title {
+  margin-bottom: 3%;
+  line-height: 35px;
+}
+
 .populaires {
   background-color: var(--grey-background);
   width: 32%;
@@ -261,7 +270,7 @@ h3 {
 .hebergementsAndPopulaires {
   display: flex;
   justify-content: space-between;
-  height: 616px;
+  height: 686px;
 }
 
 .title_star {
@@ -283,7 +292,7 @@ h3 {
   display: flex;
   /* justify-content: space-between; */
   background-color: var(--background-article);
-  height: 140px;
+  height: 160px;
   width: auto;
   padding: 5px;
   border-radius: 10%;
@@ -346,6 +355,9 @@ br {
 }
 
 .activites {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
   /* Les variables CSS peuvent être "locales" et dans ce cas précis, c'est le mieux, voir : https://css-tricks.com/breaking-css-custom-properties-out-of-root-might-be-a-good-idea/ */
 
   --frioul/*xs*/ : 165px; /* calc(var(--pomegues) + var(--gap)); */
@@ -372,9 +384,16 @@ br {
   /* background-color: brown; */
 }
 
+.test {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .activites {
+} */
+
 .activites_container {
   display: flex;
-  /* background-color: gold; */
   height: 449px;
   gap: var(--gap);
 }
@@ -426,15 +445,16 @@ br {
 }
 
 .activites_article {
-  background-color: aqua;
-  border-radius: 40px 40px 42px 42px;
+  /* background-color: aqua; */
+  border-radius: 40px 40px 20px 20px;
   box-shadow: 0 0px 5px grey;
 }
 
 .activites_article > h4 {
   font-weight: bold;
-  padding-top: 6%;
-  padding-left: 7%;
+  padding-top: 7%;
+  padding-left: 9%;
+  padding-bottom: 8%;
   height: var(--txt);
   background-color: white;
   border-radius: 0% 0% 40px 40px;
@@ -484,11 +504,315 @@ footer {
 
 .footer_nav > ul > li {
   line-height: 30px;
+  width: 200px;
 }
 
 .footer_ul {
   line-height: 50px;
 }
+
+/* ********TABLETTE******* */
+/***************************/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  header {
+    margin-bottom: 100px;
+  }
+
+  .main-top {
+    margin-bottom: 350px;
+  }
+  .hebergementsAndPopulaires {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 900px;
+  }
+
+  .hebergements {
+    background-color: var(--grey-background);
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+    /* height: 880px; */
+  }
+
+  .hebergements_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    /* height: 100%; */
+  }
+
+  .hebergements_title {
+    display: block;
+    margin-bottom: 20px;
+    /* text-align: center; */
+  }
+
+  .hebergements_article {
+    background-color: var(--background-article);
+    width: calc(50% - 20px);
+    height: 220px;
+    padding: 5px;
+    border-radius: 10%;
+  }
+
+  .hebergements_article > h4 {
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .hebergements_article > p {
+    font-size: medium;
+    margin-top: 5px;
+    padding-left: 10px;
+  }
+
+  .hebergements_article > span {
+    padding-left: 10px;
+  }
+
+  .populaires {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+  }
+
+  .populaires_container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .populaires_article {
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 0; */
+    width: 33%;
+    height: 210px;
+  }
+
+  .photo_populaires {
+    width: 100%;
+    height: 50%;
+  }
+
+  .photo_populaires > img {
+    border-radius: 10% 10% 0% 0%;
+  }
+
+  .activites {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .footer {
+    display: flex;
+  }
+
+  .footer_nav {
+    margin: 0%;
+    width: 33%;
+    flex: 1;
+  }
+
+  .filters-container > p {
+  }
+
+  .filters-container {
+  }
+  .filters-container > label > button {
+    font-size: small;
+  }
+
+  .filters-container > label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.fa-magnifying-glass::before {
+  display: none;
+}
+
+/* **********SMARTPHONE*********** */
+/***********************************/
+@media screen and (max-width: 767px) {
+  .page {
+    margin: 0%;
+  }
+
+  .header_menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_logo {
+    width: 25%;
+    margin: 25px 0;
+  }
+
+  .header_logo > img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .ancres_li a {
+    display: block;
+    padding: 0;
+  }
+
+  .header_menu > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-top {
+    padding-left: 5%;
+  }
+  .main-top > h2 {
+    /* padding-left: 1%; */
+    font-size: large;
+  }
+
+  .main-top > p {
+    font-size: small;
+    padding-left: 1%;
+  }
+
+  .main-top > form {
+    display: flex;
+  }
+
+  .main-top > form > .search {
+    display: none;
+  }
+
+  .main-top > .filters-container {
+    flex-wrap: wrap;
+    margin-bottom: 20px<;
+  }
+  .main-top > .filters-container > p {
+    width: 100%;
+    padding: 0px;
+    height: 30px;
+  }
+
+  .main-top > .filters-container > label {
+    margin-bottom: 15px;
+  }
+
+  .fa-magnifying-glass::before {
+    display: revert;
+    font-size: 15px;
+    background-color: var(--blue-site);
+    padding: 13.4px;
+    border-radius: 15px 15px 15px 15px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+  }
+  .header_menu > ul {
+    justify-content: space-around;
+  }
+
+  .ancres_li {
+    width: 50%;
+    text-align: center;
+    border-bottom: solid 2px var(--grey-background);
+  }
+
+  .ancres_li:hover {
+    border-top: none;
+    border-bottom: solid 2px var(--blue-site);
+    color: var(--blue-site);
+  }
+
+  .ancres_li a {
+    margin-bottom: 10px;
+  }
+
+  .info > .fa-info {
+    padding: 2px 14px 17px 9px;
+    width: 25px;
+    height: 20px;
+  }
+
+  .hebergementsAndPopulaires {
+    flex-direction: column-reverse;
+    margin-top: 750px;
+  }
+
+  .hebergementsAndPopulaires > .hebergements {
+    width: 100%;
+    background-color: white;
+    padding: 0 15px 0 15px;
+  }
+
+  .hebergementsAndPopulaires > .hebergements > .hebergements_title {
+    margin-bottom: 20px;
+  }
+
+  .hebergementsAndPopulaires > .populaires {
+    width: 100%;
+    border-radius: initial;
+  }
+
+  .hebergementsAndPopulaires > .populaires > .title_star {
+    margin-bottom: 10px;
+  }
+
+  .hebergements_article {
+    width: 100%;
+  }
+
+  .activites {
+    margin-top: 255%;
+  }
+
+  .activites_container {
+    gap: initial;
+  }
+
+  .activites_left-side {
+    gap: initial;
+  }
+
+  .activites_right-side {
+    gap: initial;
+  }
+
+  .pomegues_frioul_container,
+  .dame_longchamp_container {
+    height: auto;
+  }
+
+  .dame,
+  .longchamp,
+  .pomegues .frioul {
+    height: 380;
+  }
+
+  .vieuxPort-calanques {
+    height: 380;
+  }
+}
+
+/* {
+  content: "\f002";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+} */
+
+/*Concernant les breakpoints, nous avons convenu avec le designer UI
+d’utiliser 992 px et 768 px.
+992 px pour les écrans d’ordinateurs et 768 px pour les tablettes, et
+tout ce qui est en dessous de 768 pour les téléphones portables.*/
 
 /*sens border-radius : 
 2 valeurs : haut-gauche/bas-droit, haut-droit/bas-gauche
@@ -499,4 +823,9 @@ sens box-shadow :
 Valeur 1 horizontal : positive, vers la droite; négative, vers la gauche
 Valeur 2 vertical : postive, bas; négative, haut.
 Valeur 3 propagation, Valeur 4 ombre.
+*/
+
+/*
+unset = valeur par défaut de la propriété
+revert = valeur par défaut de l'élément HTML
 */
