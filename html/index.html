@@ -20,7 +20,6 @@
 <body>
   <div class="page">
     <header>
-      <!--@whitespace----------------------------------------------------------------------->
       <nav class="header_menu">
         <h1 class="header_logo"><img src="../images/logo/Booki@3x.png" alt="Logo de Booki"></h1>
         <ul>
@@ -35,7 +34,7 @@
       <section class="main-top">
         <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
         <p class="paragraph">En plein centre ville ou en pleine nature</p>
-        <form action="">
+        <form action="#">
           <span class="fa-solid fa-location-dot"></span>
           <input class="placeholder" type="search" placeholder="Marseille, France">
           <button class="search">Rechercher</button>
@@ -46,32 +45,31 @@
           <p>Filtres</p>
 
           <label for="economique">
-            <span class="fa-solid fa-money-bill-wave" alt="image décorative d'un billet de banque"
+            <span class="fa-solid fa-money-bill-wave" aria-label="image décorative d'un billet de banque"
               aria-hidden="true"></span>
-            <button name="economique">Économique</button>
+            <button id="economique" name="economique">Économique</button>
           </label>
 
           <label for="familial">
             <!--Ce n'est pas la meilleure icone, il y en a une, "family", sur FontAwesome, qui correspondrait mieux, mais bon, il faut respecter la maquette-->
             <span class="fa-solid fa-child-reaching"
-              alt="image décorative d'un billet d'un enfant avec les bras en l'air" aria-hidden="true"></span>
-            <button name="familial">Familial</button>
+              aria-label="image décorative d'un billet d'un enfant avec les bras en l'air" aria-hidden="true"></span>
+            <button id="familial" name="familial">Familial</button>
           </label>
 
           <label for="romantique">
-            <span class="fa-solid fa-heart" alt="image décorative d'un coeur" aria-hidden="true"></span>
-            <button name="romantique">Romantique</button>
+            <span class="fa-solid fa-heart" aria-label="image décorative d'un coeur" aria-hidden="true"></span>
+            <button id="romantique" name="romantique">Romantique</button>
           </label>
 
           <label for="animaux-autorises">
-            <span class="fa-solid fa-dog" alt="image décorative d'un chien" aria-hidden="true"></span>
-            <button name="animaux-autorises">Animaux autorisés</button>
+            <span class="fa-solid fa-dog" aria-label="image décorative d'un chien" aria-hidden="true"></span>
+            <button id="animaux-autorises" name="animaux-autorises">Animaux autorisés</button>
           </label>
         </div>
 
         <div class="info">
-          <span class="fa-solid fa-info" alt="image décorative d'un i d'information" aria-hidden="true"
-            alt="information"></span>
+          <span class="fa-solid fa-info" aria-label="image décorative d'un i d'information" aria-hidden="true"></span>
           <em>Plus de 500 logements sont disponibles dans cette ville
           </em>
         </div>
@@ -117,7 +115,8 @@
 
             <a href="#" class="hebergements_article">
               <div class="photo_hebergements">
-                <img src="../images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
+                <img src="../images/hebergements/1_xlarge/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                  alt="Photo d'une chambre de l'hôtel Les mouettes">
               </div>
               <h4>Hôtel Les mouettes</h4>
               <p>Nuit à partir de <em class="price">76€</em></p>
@@ -132,7 +131,8 @@
 
             <a href="#" class="hebergements_article">
               <div class="photo_hebergements"><img
-                  src="../images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
+                  src="../images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                  alt="Photo d'une chambre de l'hôtel de la mer">
               </div>
               <h4>Hôtel de la mer</h4>
               <p>Nuit à partir de <em class="price">46€</em></p>
@@ -147,7 +147,8 @@
 
             <a href="#" class="hebergements_article">
               <div class="photo_hebergements"> <img
-                  src="../images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
+                  src="../images/hebergements/1_xlarge/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                  alt="photo d'une chambre de l'auberge Le Panier">
               </div>
 
               <h4>Auberge Le Panier</h4>
@@ -163,7 +164,8 @@
 
             <a href="#" class="hebergements_article">
               <div class="photo_hebergements"><img
-                  src="../images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
+                  src="../images/hebergements/1_xlarge/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                  alt="photo d'une chambre de l'hôtel chez Amina">
               </div>
               <h4>Hôtel chez Amina</h4>
               <p>Nuit à partir de <em class="price">96€</em></p>
@@ -189,7 +191,8 @@
           <div class="populaires_container">
             <a href="#" class="populaires_article">
               <div class="photo_populaires"><img
-                  src="../images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
+                  src="../images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                  alt="Photo d'une chambre de l'hôtel Le soleil du matin">
               </div>
               <div class="populaires_article_right-side">
                 <div class="txt_article">
@@ -208,7 +211,8 @@
 
             <a href="#" class="populaires_article">
               <div class="photo_populaires"><img
-                  src="../images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
+                  src="../images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg"
+                  alt="Photo d'une chambre d'une chambre d'hôte d'Au coeur de l'eau">
               </div>
               <div class="populaires_article_right-side">
                 <div class="txt_article">
@@ -227,7 +231,8 @@
 
             <a href="#" class="populaires_article">
               <div class="photo_populaires"><img
-                  src="../images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
+                  src="../images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+                  alt="Photo d'une chambre de l'hôtel Tout bleu et Blanc">
               </div>
               <div class="populaires_article_right-side">
                 <div class="txt_article">
@@ -260,20 +265,23 @@
 
             <a href="#" class="activites_article vieuxPort-calanques">
               <div class="photo_activites"><img
-                  src="../images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt=""></div>
+                  src="../images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux Port">
+              </div>
               <h4>Vieux Port</h4>
             </a>
             <div class="pomegues_frioul_container">
               <a href="#" class="activites_article pomegues">
                 <div class="photo_activites"><img
-                    src="../images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="">
+                    src="../images/activites/1_xlarge/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                    alt="Photo du fort de Pomègues">
                 </div>
                 <h4>Fort de Pomègues</h4>
               </a>
 
               <a href="#" class="activites_article frioul">
                 <div class="photo_activites"><img
-                    src="../images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="">
+                    src="../images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+                    alt="Photo des Îles du Frioul">
                 </div>
                 <h4>Îles du Frioul</h4>
               </a>
@@ -285,19 +293,22 @@
 
             <a href="#" class="activites_article vieuxPort-calanques">
               <div class="photo_activites"><img
-                  src="../images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt=""></div>
+                  src="../images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                  alt="Photo du Parc National des Calanques"></div>
               <h4>Parc National des Calanques</h4>
             </a>
             <div class="dame_longchamp_container">
               <a href="#" class="activites_article dame">
                 <div class="photo_activites"><img
-                    src="../images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt=""></div>
+                    src="../images/activites/1_xlarge/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                    alt="Photo de Notre Dame de la Garde"></div>
                 <h4>Notre-Dame-de-la-Garde</h4>
               </a>
 
               <a href="#" class="activites_article longchamp">
                 <div class="photo_activites"><img
-                    src="../images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="">
+                    src="../images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                    alt="Photo du parc Longchamp">
                 </div>
                 <h4>Parc Longchamp</h4>
               </a>
@@ -312,11 +323,10 @@
 
     </main>
   </div>
-  </div>
 
 
   <footer class="footer">
-
+    <!--Modifier les .footer-category : un a ne peut être l'enfant de ul-->
     <nav class="footer_nav">
       <ul class="footer_ul"><a class="footer-category" id="a_propos" href="">A propos</a>
         <li><a href="#">Fonctionnement du site</a></li>

@@ -576,6 +576,10 @@ footer {
     padding-left: 10px;
   }
 
+  .photo_hebergements > img {
+    border-radius: 24px 24px 0% 0%;
+  }
+
   .populaires {
     display: flex;
     flex-direction: column;
@@ -594,6 +598,7 @@ footer {
     /* margin-bottom: 0; */
     width: 33%;
     height: 210px;
+    border-radius: 13%;
   }
 
   .photo_populaires {
@@ -602,13 +607,21 @@ footer {
   }
 
   .photo_populaires > img {
-    border-radius: 10% 10% 0% 0%;
+    border-radius: 24px 24px 0% 0%;
   }
 
   .activites {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+  }
+
+  .activites_article {
+    border-radius: 24px 24px 20px 20px;
+  }
+
+  .photo_activites > img {
+    border-radius: 24px 24px 0% 0%;
   }
 
   .footer {
@@ -621,11 +634,12 @@ footer {
     flex: 1;
   }
 
-  .filters-container > p {
+  /* .filters-container > p {
   }
 
   .filters-container {
-  }
+  } */
+
   .filters-container > label > button {
     font-size: small;
   }
@@ -695,7 +709,7 @@ footer {
 
   .main-top > .filters-container {
     flex-wrap: wrap;
-    margin-bottom: 20px<;
+    margin-bottom: 20px;
   }
   .main-top > .filters-container > p {
     width: 100%;
@@ -782,6 +796,10 @@ footer {
     margin-bottom: 20px;
   }
 
+  .photo_hebergements > img {
+    border-radius: 24px 24px 0% 0%;
+  }
+
   .afficher-plus {
     margin-top: 10px;
   }
@@ -811,6 +829,14 @@ footer {
     gap: initial;
     flex-direction: column;
     width: 100%;
+  }
+
+  .activites_article {
+    border-radius: 24px 24px 20px 20px;
+  }
+
+  .photo_activites > img {
+    border-radius: 24px 24px 0% 0%;
   }
 
   .pomegues_frioul_container,
@@ -844,6 +870,10 @@ footer {
     flex-direction: column;
     margin-top: 230%;
     height: auto;
+  }
+
+  footer > nav {
+    margin-bottom: 20px;
   }
 }
 
