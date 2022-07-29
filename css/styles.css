@@ -175,7 +175,7 @@ button {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  border-radius: 10% 10% 0 0;
+  border-radius: 24px 24px 0% 0%;
 }
 
 .hebergements {
@@ -202,8 +202,7 @@ button {
   width: calc(33% - 20px);
   height: 220px;
   padding: 5px;
-  border-radius: 10%;
-}
+  border-radius: 24px 24px 24px 24px;}
 
 .hebergements_article > h4 {
   font-weight: bold;
@@ -441,13 +440,12 @@ br {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  border-radius: 10% 10% 0 0;
+  border-radius: 24px 24px 0% 0%;
 }
 
 .activites_article {
   /* background-color: aqua; */
   border-radius: 40px 40px 20px 20px;
-  box-shadow: 0 0px 5px grey;
 }
 
 .activites_article > h4 {
@@ -458,6 +456,7 @@ br {
   height: var(--txt);
   background-color: white;
   border-radius: 0% 0% 40px 40px;
+  box-shadow: 0 0px 5px grey;
 }
 
 .pomegues {
