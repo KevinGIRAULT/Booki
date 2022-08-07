@@ -92,15 +92,19 @@ form {
   font-weight: bold;
   font-size: large;
 }
-
-.magnifying-glass::before {
+/*On cible .magnifying-glass avec un ::before car Font Awesome ajoute automatiqueent un before*/
+.fa-magnifying-glass::before {
   display: none;
+  background-color: red;
 }
 
 .filters-container {
   display: flex;
+  /* flex-grow: 1; */
+  /* flex-wrap: wrap; */
   margin-bottom: 30px;
 }
+
 
 .filters-container > p,
 label {
@@ -114,6 +118,8 @@ label {
 }
 
 .filters-container > label {
+  /* display: flex; */
+  /* flex-grow: 1; */
   margin-left: 1%;
   border: solid 2px var(--grey-background);
   border-left: none;
@@ -134,9 +140,7 @@ label {
   padding: 10px 10px 10px 30px;
   margin-left: -25px;
   width: auto;
-  /* height: 20px; */
   border-radius: 0 25px 25px 0;
-  /* min-width:  */
 }
 
 .filters-container span {
@@ -513,6 +517,23 @@ footer {
 
 /* ********TABLETTE******* */
 /***************************/
+@media screen and (max-width : 992px) {
+  .filters-container > label > button {
+    font-size: small;
+  }
+
+  .filters-container > label {
+    display: flex;
+    align-items: center;
+  }
+
+  .hebergementsAndPopulaires {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}
+
 
 
 
